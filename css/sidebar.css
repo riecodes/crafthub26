@@ -1,0 +1,126 @@
+.shop-container {
+    display: flex;
+    position: relative;
+    min-height: calc(100vh - 130px);
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.shop-sidebar {
+    width: 250px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    position: fixed;
+    height: calc(100vh - 130px);
+    top: 70px;
+    overflow-y: auto;
+    z-index: 98;
+}
+
+.shop-sidebar .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-bottom: 5px;
+}
+
+.shop-sidebar .menu-item[data-section="dashboard"] i {
+    color: #3b82f6;
+}
+
+.shop-sidebar .menu-item[data-section="products"] i {
+    color: #f59e0b;
+}
+
+.shop-sidebar .menu-item[data-section="orders"] i {
+    color: #8b5cf6;
+}
+
+.shop-sidebar .menu-item[data-section="profile"] i {
+    color: #10b981;
+}
+
+.shop-sidebar .menu-item[data-section="add-listings"] i {
+    color: #ec4899;
+}
+
+.shop-sidebar .menu-item:hover {
+    background: rgba(34, 197, 94, 0.1);
+    color: #333;
+}
+
+.shop-sidebar .menu-item.active {
+    background: rgba(34, 197, 94, 0.1);
+    color: #333;
+    font-weight: 500;
+}
+
+.shop-sidebar .menu-item:hover i,
+.shop-sidebar .menu-item.active i {
+    opacity: 1;
+}
+
+.shop-content {
+    flex: 1;
+    margin-left: 250px;
+    padding: 0 20px;
+    width: calc(100% - 250px);
+    position: relative;
+    z-index: 97;
+}
+
+.dashboard-title {
+    margin-top: 0;
+}
+
+footer {
+    position: relative;
+    z-index: 99;
+}
+
+@media (max-width: 768px) {
+    .shop-sidebar {
+        width: 70px;
+        padding: 20px 10px;
+    }
+
+    .shop-sidebar .menu-item span {
+        display: none;
+    }
+
+    .shop-sidebar .menu-item i {
+        margin-right: 0;
+        font-size: 24px;
+    }
+
+    .shop-content {
+        margin-left: 70px;
+        width: calc(100% - 70px);
+    }
+}
+
+.content-section {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update the icon spacing */
+.shop-sidebar .menu-item i {
+    margin-right: 15px;
+    font-size: 20px;
+} 

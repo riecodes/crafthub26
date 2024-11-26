@@ -1,0 +1,902 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+:root {
+    --body-font: "Poppins", sans-serif;
+    --primary-color: #4a90e2;
+    --secondary-color: #34495e;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+    background-image: linear-gradient(rgb(226, 192, 141), rgb(223, 168, 120), rgb(160, 93, 65));
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+#accsettings {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+.card {
+    background-color: var(--card-bg);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.card-header {
+    border-bottom: none;
+    padding: 1.5rem;
+}
+h2 {
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+.nav-pills .nav-link {
+    color: var(--secondary-color);
+    border-radius: 0;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link.active {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--secondary-color);
+}
+.bg-primary {
+    background-color: #F5E6D3 !important; 
+}
+.bg-primary.text-white {
+    color: var(--secondary-color) !important;
+}
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+.btn {
+    border-radius: 8px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+    border-color: darken(var(--primary-color), 10%);
+}
+.btn-danger {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.btn-danger:hover {
+    background-color: darken(var(--accent-color), 10%);
+    border-color: darken(var(--accent-color), 10%);
+}
+.form-label {
+    font-weight: 500;
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .nav-pills {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+    .nav-pills .nav-link {
+        padding: 0.5rem 1rem;
+    }
+}
+@media (max-width: 576px) {
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.bg-creamy-brown {
+    background-color: #F5EFE6 !important; 
+    color: #6B4F35 !important; 
+}
+
+
+.bg-creamy-brown .nav-pills .nav-link {
+    color: #6B4F35;
+    margin: 0.5rem 1rem; 
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+    border-radius: 8px; 
+}
+
+.bg-creamy-brown .nav-pills .nav-link:hover,
+.bg-creamy-brown .nav-pills .nav-link.active {
+    background-color: rgba(107, 79, 53, 0.1); 
+    color: #4A3728; 
+}
+
+.bg-creamy-brown .nav-pills {
+    padding: 0.5rem 0;
+}
+
+
+#account-general {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#account-general h4 {
+    color: #4A3728;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F5EFE6;
+}
+
+#account-general .form-group {
+    margin-bottom: 20px;
+}
+
+#account-general .form-label {
+    font-weight: 600;
+    color: #6B4F35;
+    margin-bottom: 8px;
+}
+
+#account-general .form-control {
+    border: 1px solid #E0D5C1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#account-general .form-control:focus {
+    border-color: #D2B48C;
+    box-shadow: 0 0 0 0.2rem rgba(210, 180, 140, 0.25);
+}
+
+#account-general hr {
+    border-color: #F5EFE6;
+    margin: 30px 0;
+}
+
+
+#uploadButton {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    color: #ffffff;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(74, 144, 226, 0.3);
+}
+
+#uploadButton i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+
+#uploadButton input[type="file"] {
+    display: none;
+}
+
+
+#resetImage {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+    color: #6c757d;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#resetImage i {
+    margin-right: 8px;
+    font-size: 1rem;
+}
+
+
+.profile-image-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#editButton, #saveButton, #cancelButton {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#editButton {
+    background-color: #ffffff;
+    border-color: #e0e0e0;
+    color: #4A90E2;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    align-self: flex-end;
+    margin-top: 28px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#editButton:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+#editButton i {
+    margin: 0;
+}
+
+
+@media (max-width: 576px) {
+    #editButton {
+        margin-left: 0;
+        align-self: flex-start;
+        margin-top: 15px;
+    }
+}
+
+#account-general .profile-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    margin-bottom: 20px;
+}
+
+#account-general .profile-picture-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#editButton {
+    margin-left: auto;
+    align-self: flex-end; 
+    margin-top: 28px; 
+}
+
+@media (max-width: 576px) {
+    #account-general .profile-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #editButton {
+        margin-left: 0;
+        align-self: flex-start;
+        margin-top: 15px; 
+    }
+}
+
+#userProfileForm input[readonly] {
+    background-color: #f8f9fa;
+    cursor: default;
+}
+
+#userProfileForm input[readonly]:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+/* Change Password */
+#account-change-password {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#account-change-password h4 {
+    color: #4A3728;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F5EFE6;
+}
+
+#account-change-password .form-group {
+    margin-bottom: 20px;
+}
+
+#account-change-password .form-label {
+    font-weight: 600;
+    color: #6B4F35;
+    margin-bottom: 8px;
+}
+
+#account-change-password .form-control {
+    border: 1px solid #E0D5C1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#account-change-password .form-control:focus {
+    border-color: #D2B48C;
+    box-shadow: 0 0 0 0.2rem rgba(210, 180, 140, 0.25);
+}
+
+#account-change-password .btn-primary {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#account-change-password .btn-primary:hover {
+    background-color: #3a7bc8;
+    border-color: #3a7bc8;
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.4);
+}
+
+#account-change-password .btn-danger {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+    color: #6c757d;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#account-change-password .btn-danger:hover {
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+#account-change-password .text-right {
+    text-align: right;
+    margin-top: 20px;
+}
+
+#account-change-password .text-right .btn {
+    margin-left: 10px;
+}
+
+/* Privacy Settings */
+#account-privacy-settings {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#account-privacy-settings h4 {
+    color: #4A3728;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F5EFE6;
+}
+
+#account-privacy-settings .form-group {
+    margin-bottom: 20px;
+}
+
+#account-privacy-settings .form-label {
+    font-weight: 600;
+    color: #6B4F35;
+    margin-bottom: 8px;
+}
+
+#account-privacy-settings .btn-danger {
+    background-color: #e74c3c;
+    border-color: #e74c3c;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#account-privacy-settings .btn-danger:hover {
+    background-color: #c0392b;
+    border-color: #c0392b;
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+}
+
+#accdeletion {
+    background-color: #fff5f5;
+    border: 1px solid #ffebeb;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#accdeletion .form-label {
+    color: #e74c3c;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#accdeletion p {
+    color: #6B4F35;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #F5EFE6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 0 auto 20px;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.profile-image-default {
+    font-size: 80px;
+    color: #a0a0a0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Merchant Settings */
+#account-merchant {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+#account-merchant h4 {
+    color: #4A3728;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #F5EFE6;
+}
+
+.merchant-info {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.merchant-info p {
+    color: #6B4F35;
+    margin-bottom: 20px;
+}
+
+#merchantForm .form-group {
+    margin-bottom: 20px;
+}
+
+#merchantForm .form-label {
+    font-weight: 600;
+    color: #6B4F35;
+    margin-bottom: 8px;
+}
+
+#merchantForm .form-control {
+    border: 1px solid #E0D5C1;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#merchantForm .form-control:focus {
+    border-color: #D2B48C;
+    box-shadow: 0 0 0 0.2rem rgba(210, 180, 140, 0.25);
+}
+
+#merchantForm select.form-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%236B4F35' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-6-6h12l-6 6z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+#merchantForm .btn-primary {
+    background-color: #4A90E2;
+    border-color: #4A90E2;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+#merchantForm .btn-primary:hover {
+    background-color: #357abd;
+    border-color: #357abd;
+    box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Add these new styles for the document upload section */
+.document-upload-section {
+    background-color: #fff;
+    border: 1px solid #E0D5C1;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.document-upload-section h5 {
+    color: #4A3728;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.custom-file-upload {
+    position: relative;
+    width: 100%;
+}
+
+.custom-file-upload .form-control {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 8px 0;
+}
+
+.custom-file-upload .form-control:focus {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.custom-file-upload input[type="file"] {
+    padding: 8px;
+    font-size: 0.9rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.custom-file-upload input[type="file"]::-webkit-file-upload-button {
+    background-color: #F5EFE6;
+    color: #8B6B4A;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+    outline: none;
+}
+
+.custom-file-upload input[type="file"]::-webkit-file-upload-button:hover {
+    background-color: #E8DFD3;
+}
+
+/* Enhance select dropdowns */
+#merchantForm select.form-control {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+#merchantForm select.form-control:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .row {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+    
+    .col-md-6 {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .document-upload-section {
+        padding: 15px;
+    }
+}
+
+/* Add these styles for the address row */
+#merchantForm .row .col-md-4 {
+    padding: 0 10px;
+}
+
+#merchantForm .row .form-group {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    #merchantForm .row .col-md-4 {
+        margin-bottom: 15px;
+    }
+}
+
+/* File preview styles */
+.file-preview {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    width: 100%;
+    overflow: hidden;
+}
+
+.preview-image {
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.pdf-preview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #e74c3c;
+    margin-bottom: 8px;
+    padding: 10px;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pdf-preview span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-info {
+    font-size: 0.875rem;
+    color: #6B4F35;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.file-name {
+    font-weight: 600;
+    margin-right: 5px;
+    max-width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.file-size {
+    color: #8B6B4A;
+    font-size: 0.8rem;
+}
+
+/* Application status styles */
+.application-status {
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-value {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Status variants */
+.application-status.pending {
+    background-color: #FFF8E5;
+    color: #B7791F;
+}
+
+.application-status.pending .status-dot {
+    background-color: #B7791F;
+}
+
+.application-status.approved {
+    background-color: #F0FFF4;
+    color: #2F855A;
+}
+
+.application-status.approved .status-dot {
+    background-color: #2F855A;
+}
+
+.application-status.rejected {
+    background-color: #FFF5F5;
+    color: #C53030;
+}
+
+.application-status.rejected .status-dot {
+    background-color: #C53030;
+}
+
+/* Remove hover effects for cleaner look */
+.application-status:hover {
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .application-status {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .status-dot {
+        width: 6px;
+        height: 6px;
+    }
+}
+
+/* Readonly form styles */
+#account-status .form-control[readonly] {
+    background-color: #f8f9fa;
+    border-color: #e9ecef;
+    cursor: default;
+}
+
+#account-status .form-control[readonly]:focus {
+    box-shadow: none;
+    border-color: #e9ecef;
+}
+
+.submitted-file {
+    margin-top: 8px;
+}
+
+.submitted-file .btn-outline-primary {
+    border-color: #4A90E2;
+    color: #4A90E2;
+    padding: 4px 12px;
+    font-size: 0.85rem;
+}
+
+.submitted-file .btn-outline-primary:hover {
+    background-color: #4A90E2;
+    color: #fff;
+}
+
+/* Document Preview Modal Styles */
+#documentPreviewModal .modal-content {
+    background-color: #fff;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#documentPreviewModal .modal-header {
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem 1.5rem;
+}
+
+#documentPreviewModal .modal-title {
+    color: #4A3728;
+    font-weight: 600;
+}
+
+#documentPreviewModal .modal-body {
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+}
+
+#documentPreviewContent {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#documentPreviewContent img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#documentPreviewContent embed {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.unsupported-file {
+    text-align: center;
+    padding: 2rem;
+    color: #6c757d;
+}
+
+.unsupported-file i {
+    color: #adb5bd;
+    margin-bottom: 1rem;
+}
+
+.unsupported-file .file-info {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6B4F35;
+}
+
+/* Custom scrollbar for the modal */
+#documentPreviewModal .modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#documentPreviewModal .modal-body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+#documentPreviewModal .modal-body::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+#documentPreviewModal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

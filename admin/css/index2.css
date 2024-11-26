@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+:root {
+    --body-font: "Poppins", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgb(226, 192, 141), rgb(223, 168, 120), rgb(160, 93, 65));
+    background-size: cover;
+    font-family: var(--body-font);
+    position: relative;
+    overflow: hidden;
+}
+#logo__img {
+    margin-top: 50px;
+    width: 500px;
+    filter: drop-shadow(5px 1px 1px rgba(0, 0, 0, 0.5)); /* Adds drop shadow to the logo */
+}
+#bg__img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the image stays behind other content */
+    opacity: 25%;
+    object-fit: cover; /* Ensures the image covers the entire container */
+    filter: blur(2px); /* Adjust the blur intensity as needed */
+}
+
+.login-header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+}
+#showFormBtn {
+    margin-top: 20px;
+}
+#showFormBtn, #loginBtn, .dropdown-toggle {
+    font-size: 20px;
+    padding: 10px 50px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#loginBtn, #registerDropdown {
+    font-size: 20px;
+    padding: 10px 50px;
+    margin: 5px;
+}
+.dropdown-menu {
+    font-size: 20px;
+    padding: 10px 30px;
+    margin: 0 10px;
+}
+header {
+    margin-bottom: -40px;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+

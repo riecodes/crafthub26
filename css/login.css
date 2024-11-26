@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root {
+  --body-font: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+input,
+button {
+  font-size: 1rem;
+  font-family: var(--body-font);
+}
+
+body {
+  color:white;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== LOGIN ===============*/
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+.login__img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.login__form {
+  position: relative;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 15px;
+  border: none;
+  color: #333;
+}
+.login__title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  color: #333;
+}
+.login__content, .login__box {
+  display: grid;
+}
+.login__content {
+  row-gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.login__box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: 0.75rem;
+  border-bottom: 2px solid #ccc;
+}
+.login__icon, .login__eye {
+  font-size: 1.25rem;
+  color: #666;
+}
+.login__input {
+  width: 100%;
+  padding-block: 0.8rem;
+  background: none;
+  color: #333;
+  position: relative;
+  z-index: 1;
+}
+.login__box-input {
+  position: relative;
+}
+.login__label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top 0.3s, font-size 0.3s;
+  color: #666;
+}
+.login__eye {
+  position: absolute;
+  right: 0;
+  top: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+.login__box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+.login__check, .login__check-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.login__check {
+  margin-bottom: 1.5rem;
+}
+.login__check-label, .login__forgot, .login__register {
+  font-size: .831rem;
+}
+.login__check-group {
+  column-gap: 0.5rem;
+}
+.login__check-input {
+  width: 16px;
+  height: 16px;
+}
+.login__forgot {
+  color: #666;
+}
+.login__forgot:hover {
+  text-decoration: underline;
+  color: #333;
+}
+.login__button {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: #f0e6d2;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 44px;
+}
+.login__register {
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+.login__register a {
+  color: #333;
+  font-weight: 500;
+}
+.login__register a:hover {
+  text-decoration: underline;
+  color: #1a1a1a;
+}
+
+.login__input:focus + .login__label {
+  top: -12px;
+  font-size: .831rem;
+}
+
+.login__input:not(:placeholder-shown).login__input:not(:focus) + .login__label {
+  top: -12px;
+  font-size: .831rem;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 576px) {
+  .login {
+    justify-content: center;
+  }
+  .login__form {
+    width: 432px;
+    padding: 4rem 3rem 3.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+  .login__title {
+    font-size: 2rem;
+  }
+}
+
+/* non-login forms */
+.login__form--solid {
+  background-color: white;
+  color: #333;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login__form--solid .login__title {
+  color: #333;
+}
+
+.login__form--solid .login__box {
+  border-bottom: 2px solid #ccc;
+}
+
+.login__form--solid .login__input {
+  color: #333;
+}
+
+.login__form--solid .login__label {
+  color: #666;
+}
+
+.login__form--solid .login__icon {
+  color: #666;
+}
+
+.login__form--solid .login__button {
+  background-color: #f0e6d2; 
+  color: #333; 
+}
+
+.login__form--solid .login__button:hover {
+  background-color: #e6d2b5; 
+}
+
+.login__form--solid .login__register,
+.login__form--solid .login__register a {
+  color: #666;
+}
+
+.login__form--solid .login__register a:hover {
+  color: #4a90e2;
+}
+
+.login__forgot-password {
+  text-align: left;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.login__forgot-password a {
+  color: white;
+  font-size: 0.831rem;
+}
+
+.login__forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* For the solid form variant */
+.login__form--solid .login__forgot-password a {
+  color: #666;
+}
+
+.login__form--solid .login__forgot-password a:hover {
+  color: #4a90e2;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 575px) {
+  .login__button {
+    font-size: 0.9rem;
+  }
+}

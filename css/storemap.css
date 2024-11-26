@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+ #map {
+    width: 100%;
+    flex-grow: 1;
+    height: 100%;
+ }
+ .leaflet-popup-content {
+    font-size: 1.8em; 
+  }
+  .shop-name {
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #000000;
+}
+
+.shop-description {
+    font-size: 15px;
+
+    font-family: 'Verdana', sans-serif;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.shop-distance {
+    font-size: 15px;
+    font-family: 'Verdana', sans-serif;
+    color: #888;
+    font-weight: 700;
+}
+
+.view-shop-link {
+    font-size: 15px;
+    font-family: 'Tahoma', sans-serif;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.view-shop-link:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+@media (max-width: 576px) {
+     #map {
+    width: 100%;
+    height: 100vh;
+}

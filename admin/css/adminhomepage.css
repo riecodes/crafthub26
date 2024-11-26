@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+}
+
+#content main {
+    width: 100%;
+    padding: 36px 24px;
+    font-family: 'Poppins', sans-serif;
+    max-height: calc(100vh - 56px);
+    overflow-y: auto;
+}
+
+#content main::-webkit-scrollbar {
+    width: 8px;
+}
+
+#content main::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#content main::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#content main::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#content main {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+}
+
+.head-title {
+    margin-bottom: 30px;
+}
+
+.head-title h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #7f8c8d;
+}
+
+.dashboard-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.stat-card:first-child {
+    margin-right: 20px;
+}
+
+.icon-container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.stat-card.new-applicants .icon-container {
+    background-color: #e3f2fd;
+}
+
+.stat-card.merchants .icon-container {
+    background-color: #e8f5e9;
+}
+
+.stat-card i {
+    font-size: 30px;
+}
+
+.stat-card.new-applicants i {
+    color: #2196f3;
+}
+
+.stat-card.merchants i {
+    color: #4caf50;
+}
+
+.stat-content h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.applicants-merchants-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.data-section {
+    flex: 1;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.data-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+.table-container {
+    overflow-x: auto;
+    overflow-y: auto;
+    flex-grow: 1;
+    max-height: 400px;
+}
+
+.table-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.table-container {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.1) transparent;
+}
+
+.data-section table {
+    width: 150%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    table-layout: fixed;
+}
+
+/* Adjust column widths for both tables */
+.data-section th:nth-child(1),
+.data-section td:nth-child(1) {
+    width: 25%;
+}
+
+.data-section th:nth-child(2),
+.data-section td:nth-child(2) {
+    width: 25%;
+}
+
+.data-section th:nth-child(3),
+.data-section td:nth-child(3) {
+    width: 25%;
+}
+
+.data-section th:nth-child(4),
+.data-section td:nth-child(4) {
+    width: 25%;
+}
+
+.merchants-section th:nth-child(1),
+.merchants-section td:nth-child(1) {
+    width: 20%; /* Shop Name */
+}
+
+.merchants-section th:nth-child(2),
+.merchants-section td:nth-child(2) {
+    width: 20%; /* Shop Owner */
+}
+
+.merchants-section th:nth-child(3),
+.merchants-section td:nth-child(3) {
+    width: 20%; /* Email */
+}
+
+.merchants-section th:nth-child(4),
+.merchants-section td:nth-child(4) {
+    width: 40%; /* Address - increased width */
+}
+
+.data-section th {
+    background-color: #f8f9fa;
+    color: #34495e;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.data-section td {
+    background-color: #ffffff;
+    padding: 12px;
+    color: #2c3e50;
+    font-size: 14px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    vertical-align: top; /* Align content to the top of the cell */
+}
+
+.merchants-section td:nth-child(4) {
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.data-section tbody tr {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.data-section tbody tr:hover {
+    background-color: #f1f1f1; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge {
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-badge.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.no-data {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    border-radius: 50%;
+    background-color: #3498db;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+body.dark {
+    --body-color: #1a1a1a;
+    --text-color: #ccc;
+    --card-bg: #2d2d2d;
+    --hover-color: #3a3a3a;
+    --header-color: #bb8e62;
+}
+
+body.dark .stat-card {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark .stat-card .stat-content h3,
+body.dark .stat-card .stat-content .stat-number {
+    color: #ffffff;
+}
+
+body.dark .stat-card .icon-container {
+    background-color: #3a3a3a;
+}
+
+body.dark .stat-card.new-applicants .icon-container {
+    background-color: #1565c0;
+}
+
+body.dark .stat-card.merchants .icon-container {
+    background-color: #2e7d32;
+}
+
+body.dark .stat-card i {
+    color: #ffffff;
+}
+
+body.dark .data-section {
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark .data-section h2 {
+    color: var(--header-color);
+    border-bottom-color: var(--header-color);
+}
+
+body.dark .data-section table th {
+    background-color: var(--hover-color);
+    color: var(--header-color);
+}
+
+body.dark .data-section table td {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+}
+
+body.dark .data-section tbody tr:hover {
+    background-color: var(--hover-color);
+}
+
+@media screen and (max-width: 768px) {
+    #content main {
+        padding: 20px 16px;
+    }
+
+    .head-title h1 {
+        font-size: 24px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .dashboard-stats {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .stat-card:first-child {
+        margin-right: 0;
+    }
+
+    .icon-container {
+        width: 50px;
+        height: 50px;
+    }
+
+    .stat-card i {
+        font-size: 24px;
+    }
+
+    .stat-content h3 {
+        font-size: 16px;
+    }
+
+    .stat-number {
+        font-size: 24px;
+    }
+
+    .applicants-merchants-container {
+        flex-direction: column;
+    }
+
+    .data-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .data-section h2 {
+        font-size: 20px;
+    }
+
+    .table-container {
+        max-height: 300px;
+    }
+
+    .data-section th,
+    .data-section td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+
+    .user-avatar {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        font-size: 10px;
+    }
+
+    .status-badge {
+        padding: 3px 6px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .head-title h1 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .stat-content h3 {
+        font-size: 14px;
+    }
+
+    .stat-number {
+        font-size: 20px;
+    }
+
+    .data-section h2 {
+        font-size: 18px;
+    }
+
+    .data-section th,
+    .data-section td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+
+    .user-avatar {
+        width: 24px;
+        height: 24px;
+        min-width: 24px;
+        min-height: 24px;
+        font-size: 9px;
+        margin-right: 6px;
+    }
+
+    .status-badge {
+        padding: 2px 4px;
+        font-size: 9px;
+    }
+}
+
+/* New styles for the applicants section */
+.applicants-section table {
+    width: 100%; /* Changed from 150% to 100% */
+}
+
+.applicants-section th:nth-child(1),
+.applicants-section td:nth-child(1) {
+    width: 40%; /* Name */
+}
+
+.applicants-section th:nth-child(2),
+.applicants-section td:nth-child(2) {
+    width: 40%; /* Email */
+}
+
+.applicants-section th:nth-child(3),
+.applicants-section td:nth-child(3) {
+    width: 20%; /* Status */
+}
+
+/* Adjust the existing merchants section if needed */
+.merchants-section table {
+    width: 150%; /* Keep this at 150% for more space */
+}

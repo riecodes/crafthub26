@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+:root{
+    --body-font: "Poppins", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.content1 {
+    height: 100vh;
+    background-image: linear-gradient(rgb(226, 192, 141), rgb(223, 168, 120), rgb(160, 93, 65));
+    background-size: cover;
+}
+.content2 {
+    background-color: blue;
+    height: 100%;
+}
+#logo__img{
+    height: 300px;
+}
+.index__img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+.login-header header {
+    margin-top: 10%;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: -30px;
+}
+h3 {
+    text-align: center;
+    font-weight: bold;
+}
+h4 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 2rem;
+}
+.login-btn,
+.register-btn {
+    display: inline-block;
+    padding: 15px 45px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.buttons {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+button:hover {
+    background-color: rgb(202, 138, 77);
+}
+.navbar {
+    padding: 10px;
+}
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 20px;
+}
+@media (max-width: 1150px) {
+    .login-btn,
+    .register-btn {
+        padding: 8px 10px;
+        font-size: 12px; 
+        width: 50%; 
+    }
+    
+}
+@media (max-width: 768px) {
+    .login-btn,
+    .register-btn {
+        padding: 8px 16px;
+        font-size: 14px; 
+        width: 40%; 
+    }
+    .content2{
+        display: none;
+    }
+}

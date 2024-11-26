@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.ch-flexMain {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 1rem;
+  background: #f1d3a6;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ch-flex3 .ch-logo img {
+  max-height: 40px;
+  width: auto;
+}
+
+.ch-flex2 {
+  flex: 1;
+  max-width: 500px;
+  margin: 0 1rem;
+}
+
+.ch-search-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #F5EFE7;
+  border-radius: 15px;
+  padding: 3px 12px;
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.ch-search-input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  padding: 4px;
+  font-size: 13px;
+  color: #4A3728;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.ch-search-input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.ch-search-input::placeholder {
+  color: #8D7B6A;
+  font-style: italic;
+}
+
+.ch-search-btn {
+  background: none;
+  border: none;
+  color: #4A3728;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+}
+
+#ch-icons {
+  display: flex;
+  align-items: center;
+  margin-right: 1.5rem;
+}
+
+#ch-icons ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#ch-icons li {
+  margin-left: 1rem;
+  position: relative;
+}
+
+#ch-icons li:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+#ch-icons a {
+  font-size: 1.4rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#ch-icons li a[href="chatroom.php?chat_with_id=1000&chat_with_type=merchant&merchant_id=1000"] {
+  color: #0056b3;
+}
+
+#ch-icons li a[href="cart.php"] {
+  color: #1e7e34;
+}
+
+#ch-icons li a[href="merdashboard.php"] {
+  color: #e67e22;
+}
+
+#ch-icons li a:hover {
+  color: #b5838d;
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+#ch-icons .ch-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ff4757;
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 5px;
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.ch-nav-user-section {
+  display: flex;
+  align-items: center;
+}
+
+.ch-nav-user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #d4a373, #b5838d);
+  border-radius: 30px;
+  padding: 4px 10px;
+  margin: 0 0.5rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 150px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ch-nav-user-profile:hover {
+  background: linear-gradient(135deg, #b5838d, #d4a373);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ch-nav-user-profile .ch-nav-username {
+  display: inline-block;
+  font-size: 12px;
+  color: #f5efe7;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 120px;
+  margin: 0 auto;
+}
+
+.ch-nav-user-profile .ch-nav-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #4A3728;
+  margin-right: 5px;
+}
+
+.ch-dropdown {
+  position: relative;
+  margin-left: 0.5rem;
+}
+
+.ch-dropbtn {
+  background-color: transparent;
+  color: #4A3728;
+  padding: 10px 5px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.ch-dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 140px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  z-index: 1;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.ch-dropdown-content a {
+  color: #4A3728;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.ch-dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.ch-dropdown:hover .ch-dropdown-content {
+  display: block;
+}
+
+.ch-nav-divider {
+  height: 24px;
+  width: 1px;
+  background-color: #4A3728;
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 768px) {
+  .ch-flexMain {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px;
+  }
+
+  .ch-flex2 {
+    flex: 1 0 100%;
+    order: 3;
+    margin: 10px 0;
+    max-width: none;
+  }
+
+  #ch-icons {
+    margin-right: 0.75rem;
+    padding-top: 5px; 
+  }
+
+  #ch-icons li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  #ch-icons li:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  .ch-nav-user-profile {
+    padding: 2px 6px;
+    margin: 0 0.25rem;
+    min-width: 120px;
+    justify-content: center;
+  }
+
+  .ch-nav-user-profile .ch-nav-username {
+    max-width: 100px;
+    font-size: 12px;
+    margin: 0 auto;
+  }
+
+  .ch-nav-user-profile .ch-nav-avatar {
+    width: 24px;
+    height: 24px;
+  }
+
+  .ch-nav-divider {
+    height: 20px;
+    margin: 0 0.25rem;
+  }
+
+  .ch-nav-divider:last-of-type {
+    margin-right: 0.5rem; 
+  }
+
+  .ch-menu-icon {
+    margin-left: 0.5rem; 
+  }
+
+  .ch-dropdown-content {
+    min-width: 110px;
+    right: -10px;
+  }
+
+  .ch-dropdown-content a {
+    padding: 6px 8px;
+    font-size: 0.85rem;
+  }
+
+  .ch-dropbtn {
+    padding: 8px 3px;
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ch-flexMain {
+    padding: 5px;
+  }
+
+  .ch-flex2 {
+    margin: 5px 0;
+  }
+
+  #ch-icons li {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  #ch-icons li:not(:last-child) {
+    margin-right: 0.75rem;
+  }
+
+  .ch-nav-user-profile {
+    padding: 2px 4px;
+    margin: 0 0.15rem;
+    min-width: 100px;
+  }
+
+  .ch-nav-user-profile .ch-nav-username {
+    max-width: 80px;
+    font-size: 11px;
+  }
+
+  .ch-nav-divider {
+    height: 18px;
+    margin: 0 0.15rem;
+  }
+
+  #ch-icons {
+    padding-top: 3px; 
+  }
+
+  .ch-dropdown-content {
+    min-width: 90px;
+    right: -15px;
+  }
+
+  .ch-dropdown-content a {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .ch-dropbtn {
+    padding: 6px 2px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .ch-dropdown-content {
+    min-width: 80px;
+    right: -20px;
+  }
+
+  .ch-dropdown-content a {
+    padding: 3px 5px;
+    font-size: 0.7rem;
+  }
+
+  .ch-dropbtn {
+    padding: 5px 1px;
+    font-size: 0.9rem;
+  }
+}
+
+.ch-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.ch-sidebar-content {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s ease-in-out;
+    z-index: 1001;
+    padding: 20px;
+}
+
+.ch-sidebar-content a {
+    display: block;
+    color: #4A3728;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.ch-sidebar-content a:last-child {
+    border-bottom: none;
+}
+
+.ch-sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4A3728;
+}
+
+.ch-sidebar-overlay.active {
+    display: block;
+}
+
+.ch-sidebar-overlay.active .ch-sidebar-content {
+    right: 0;
+}
+
+@media screen and (min-width: 769px) {
+    .ch-dropdown:hover .ch-dropdown-content {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ch-dropdown-content {
+        display: none !important;
+    }
+}
+
+.ch-responsive {
+    display: none;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.ch-open-sidebar-button, .ch-close-sidebar-button {
+    cursor: pointer;
+}
+
+#ch-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.ch-links-container {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.ch-links-container a {
+    display: block;
+    color: #4A3728;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.ch-links-container a:last-child {
+    border-bottom: none;
+}
+
+#sidebar-active:checked ~ #ch-overlay {
+    display: block;
+}
+
+#sidebar-active:checked ~ .ch-links-container {
+    right: 0;
+}
+
+.ch-close-sidebar-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+@media screen and (min-width: 769px) {
+    .ch-links-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ch-dropdown-content {
+        display: none !important;
+    }
+}
+
+.ch-menu-icon {
+    display: none;
+}
+
+.ch-sidebar-toggle {
+    background: none;
+    border: none;
+    color: #4A3728;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.ch-sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: none;
+}
+
+.ch-sidebar-content {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 10000; 
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.ch-sidebar-content a {
+    display: block;
+    color: #4A3728;
+    padding: 10px 0;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.ch-sidebar-content a:last-child {
+    border-bottom: none;
+}
+
+.ch-sidebar-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #4A3728;
+}
+
+.ch-sidebar-overlay.active {
+    display: block;
+}
+
+.ch-sidebar-overlay.active .ch-sidebar-content {
+    right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .ch-dropdown {
+        display: none;
+    }
+
+    .ch-menu-icon {
+        display: block;
+    }
+}

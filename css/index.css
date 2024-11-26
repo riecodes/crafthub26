@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+:root {
+    --body-font: "Poppins", sans-serif;
+    --primary-color: #8B4513;
+    --secondary-color: #DEB887;
+    --text-color: #333;
+    --background-color: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgb(226, 192, 141), rgb(223, 168, 120), rgb(160, 93, 65));
+    background-size: cover;
+    font-family: var(--body-font);
+    position: relative;
+    overflow: hidden;
+    color: var(--text-color);
+}
+.about-link {
+    position: absolute;
+    top: 10px; 
+    left: 15px;
+    font-size: 0.9rem; 
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    padding: 3px 6px;
+    transition: color 0.3s ease;
+}
+
+.about-link:hover {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1); 
+}
+
+#logo__img {
+    width: 100%; 
+    max-width: 400px; 
+    height: auto; 
+    margin-bottom: 1rem; 
+}
+#bg__img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures the image stays behind other content */
+    opacity: 25%;
+    object-fit: cover; 
+    filter: blur(2px); 
+}
+
+.login-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 90vh;
+    text-align: center;
+}
+#showFormBtn {
+    margin-top: 20px;
+}
+#showFormBtn, #loginBtn, .dropdown-toggle {
+    font-size: 20px;
+    padding: 10px 50px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#loginBtn, #registerBtn {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--primary-color);
+}
+
+#loginBtn:hover, #registerBtn:hover {
+    background-color: white;
+    transform: translateY(-2px);
+}
+
+header {
+    margin-bottom: -40px; /* Reverted to original value */
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+    font-size: 1.75rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    font-size: 17px;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+
